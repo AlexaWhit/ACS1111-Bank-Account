@@ -19,13 +19,13 @@ Your Python program should be created in one file called BankAccount.py.
 
 Define a BankAccount class.
 
-# A bank account should have the following attributes:
+#### A bank account should have the following attributes:
 
 full_name - the full name of the bank account account owner.
 account_number - randomly generated 8 digit number, unique per account.
 balance - the balance of money in the account, should start at 0.
 
-# Then define the following methods for the BankAccount class:
+#### Then define the following methods for the BankAccount class:
 
 The deposit method will take one parameter amount and will add amount to the balance. Also, it will print the message: “Amount deposited: $X.XX new balance: $Y.YY”
 
@@ -41,7 +41,7 @@ Joi Anderson
 Account No.: ****5678
 Balance: $100.00
 
-# Outside of the BankAccount class, define 3 different bank account examples using the BankAccount() object.
+#### Outside of the BankAccount class, define 3 different bank account examples using the BankAccount() object.
 
 Your examples should show you using the different methods above to demonstrate them working.
 
