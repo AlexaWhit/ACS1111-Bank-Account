@@ -34,9 +34,11 @@ class BankAccount:
     def withdraw(self):
         user_input = input("Please enter an amount to withdraw: $")
         amount = float(user_input)
-        if amount > 0:
+        if amount < self.current_balance:
             self.current_balance = self.current_balance - amount 
             print(f"Amount withdrawn: ${amount} new balance: ${self.current_balance} ")
+        elif amount > self.current_balance:
+            print("Insufficient funds.")
         else:
             print("Please enter a valid monetary amount in $X.XX format.")
 
@@ -57,6 +59,6 @@ class BankAccount:
 alexa_account = BankAccount("Alexa Whitney", "05546992", 0)
 BankAccount.deposit(alexa_account)
 BankAccount.withdraw(alexa_account)
-BankAccount.get_balance(alexa_account)
-BankAccount.add_interest(alexa_account)
-BankAccount.print_statement(alexa_account)
+#BankAccount.get_balance(alexa_account)
+#BankAccount.add_interest(alexa_account)
+#BankAccount.print_statement(alexa_account)
