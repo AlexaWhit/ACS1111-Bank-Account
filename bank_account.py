@@ -7,6 +7,10 @@ def random_account_number(n):
     range_end = (10**n)-1
     return randint(range_start, range_end)
 
+#Function to clear terminal for better readability
+def clear_terminal():
+    print("\033[H\033[J")
+
 # Create BankAccount class:
 class BankAccount:
     def __init__(self, full_name, account_number, current_balance):
@@ -20,7 +24,7 @@ class BankAccount:
     # DEPOSIT METHOD #
     # Adds amount to the balance and prints a message showing the amount deposited and the updated balance
     def deposit(self):
-        user_input = input("Please enter an amount to deposit: $")
+        user_input = input(f"Please enter an amount to deposit for {self.name}: $")
         amount = float(user_input)
         if amount > 0:
             self.current_balance = self.current_balance + amount 
@@ -61,9 +65,33 @@ class BankAccount:
     def print_statement(self):
         print(f"{self.name}\nAccount No.: {self.account_number}\nBalance: ${self.current_balance}")
 
+clear_terminal()
+
 alexa_account = BankAccount("Alexa Whitney", random_account_number(8), 0)
 BankAccount.deposit(alexa_account)
 BankAccount.withdraw(alexa_account)
 BankAccount.get_balance(alexa_account)
 BankAccount.add_interest(alexa_account)
 BankAccount.print_statement(alexa_account)
+
+peyton_account = BankAccount("Peyton Manning", random_account_number(8), 500000)
+BankAccount.deposit(peyton_account)
+BankAccount.withdraw(peyton_account)
+BankAccount.get_balance(peyton_account)
+BankAccount.add_interest(peyton_account)
+BankAccount.print_statement(peyton_account)
+BankAccount.deposit(peyton_account)
+BankAccount.deposit(peyton_account)
+BankAccount.add_interest(peyton_account)
+BankAccount.print_statement(peyton_account)
+
+## FIX CODE TO TAKE IN AMOUNT INSTEAD OF SELF -- MAY NEED TO ASK DANI
+mitchell_account = BankAccount("Mitchell Moore", "03141592", 0)
+BankAccount.deposit(mitchell_account) # DEPOSIT $400,000
+BankAccount.print_statement(mitchell_account)
+BankAccount.add_interest(mitchell_account)
+BankAccount.print_statement(mitchell_account)
+BankAccount.withdraw(mitchell_account) # WITHDRAW $150
+BankAccount.print_statement(mitchell_account)
+
+
