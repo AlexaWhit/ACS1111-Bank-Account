@@ -18,7 +18,6 @@ class BankAccount:
         self.account_number = account_number
         self.current_balance = current_balance
 
-        #starting_balance = 0
         account_number = random_account_number(8)
 
     # DEPOSIT METHOD #
