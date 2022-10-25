@@ -15,7 +15,7 @@ class BankAccount:
         self.current_balance = current_balance
 
         #starting_balance = 0
-        account_number = print(random_account_number(8))
+        account_number = random_account_number(8)
 
     # DEPOSIT METHOD #
     # Adds amount to the balance and prints a message showing the amount deposited and the updated balance
@@ -24,7 +24,7 @@ class BankAccount:
         amount = float(user_input)
         if amount > 0:
             self.current_balance = self.current_balance + amount 
-            print(f"Amount deposited: ${amount} new balance: ${self.current_balance} ")
+            print(f"Amount deposited: ${amount} | New balance: ${self.current_balance} ")
         else:
             print("Please enter a valid monetary amount in $X.XX format.")
 
@@ -36,7 +36,7 @@ class BankAccount:
         amount = float(user_input)
         if amount < self.current_balance:
             self.current_balance = self.current_balance - amount 
-            print(f"Amount withdrawn: ${amount} new balance: ${self.current_balance} ")
+            print(f"Amount withdrawn: ${amount} | New balance: ${self.current_balance} ")
         elif amount > self.current_balance:
             print("Insufficient funds.")
         else:
@@ -56,13 +56,14 @@ class BankAccount:
         self.current_balance = self.current_balance + interest
         print(f"The amount of interest is: ${interest}. New balance is: ${self.current_balance}")
 
-    # Create print_statement method which prints a message with account name, account number, and balance
+    # PRINT STATEMENT METHOD #
+    # Prints a message with account name, account number, and balance
     def print_statement(self):
-        print(f"{self.name}\nAccount No.: {self.account_number}\nBalance: {self.balance}")
+        print(f"{self.name}\nAccount No.: {self.account_number}\nBalance: ${self.current_balance}")
 
-alexa_account = BankAccount("Alexa Whitney", "05546992", 0)
+alexa_account = BankAccount("Alexa Whitney", random_account_number(8), 0)
 BankAccount.deposit(alexa_account)
 BankAccount.withdraw(alexa_account)
 BankAccount.get_balance(alexa_account)
 BankAccount.add_interest(alexa_account)
-#BankAccount.print_statement(alexa_account)
+BankAccount.print_statement(alexa_account)
