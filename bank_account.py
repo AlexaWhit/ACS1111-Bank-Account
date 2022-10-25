@@ -48,10 +48,13 @@ class BankAccount:
         print(f"Your current balance is: ${self.current_balance}")
         return self.current_balance
 
-    # Create add_interest method: Adds interest to the user's balance. 
+    # ADD INTEREST METHOD #
+    # Adds monthly interest to the user's balance. 
     def add_interest(self):
-        interest = (self.current_balance * 0.00083)
-        print(f"The amount of interest is: ${interest}.")
+        #Using round function to round to 2 decimal places
+        interest = round((self.current_balance * 0.00083), 2)
+        self.current_balance = self.current_balance + interest
+        print(f"The amount of interest is: ${interest}. New balance is: ${self.current_balance}")
 
     # Create print_statement method which prints a message with account name, account number, and balance
     def print_statement(self):
@@ -61,5 +64,5 @@ alexa_account = BankAccount("Alexa Whitney", "05546992", 0)
 BankAccount.deposit(alexa_account)
 BankAccount.withdraw(alexa_account)
 BankAccount.get_balance(alexa_account)
-#BankAccount.add_interest(alexa_account)
+BankAccount.add_interest(alexa_account)
 #BankAccount.print_statement(alexa_account)
