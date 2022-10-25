@@ -80,10 +80,6 @@ BankAccount.withdraw(peyton_account)
 BankAccount.get_balance(peyton_account)
 BankAccount.add_interest(peyton_account)
 BankAccount.print_statement(peyton_account)
-BankAccount.deposit(peyton_account)
-BankAccount.deposit(peyton_account)
-BankAccount.add_interest(peyton_account)
-BankAccount.print_statement(peyton_account)
 
 ## FIX CODE TO TAKE IN AMOUNT INSTEAD OF SELF -- MAY NEED TO ASK DANI
 mitchell_account = BankAccount("Mitchell Moore", "03141592", 0)
