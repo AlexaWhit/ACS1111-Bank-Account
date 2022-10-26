@@ -14,6 +14,6 @@ Each bank account includes:
 3. Account balance (which starts at 0 unless otherwise stated)
 
 ## Usage
-Run `python3 bankaccount.py` and follow the prompts!
+Run `python3 bank_account.py` and follow the prompts!
 
 
