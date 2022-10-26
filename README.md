@@ -10,7 +10,7 @@ Using object-oriented programming concepts, I created a Python program that simu
 
 Each bank account includes:
 1. Full Name
-2. Randomly generate 8 digit account number
+2. Randomly generated 8 digit account number
 3. Account balance (which starts at 0 unless otherwise stated)
 
 ## Usage
