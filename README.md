@@ -4,6 +4,7 @@
 Using object-oriented programming concepts, I created a Python program that simulates a bank account with the ability to:
 - deposit
 - withdraw
+- check/get balance
 - add interest
 - print statement
 
